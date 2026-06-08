@@ -9,7 +9,6 @@ An intelligent learning assistant that helps users study documents, books, or no
 ## 🌐 Live Demo
 
 - **Frontend:** [https://ai-companion-ruby-three.vercel.app/](https://ai-companion-ruby-three.vercel.app/)
-- **Backend API:** [https://ai-companion-backend.onrender.com/docs](https://ai-companion-backend.onrender.com/docs)
 
 ---
 
