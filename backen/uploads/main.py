@@ -9,9 +9,18 @@ import faiss
 import numpy as np
 import os
 from memory import save_fact, get_memory
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# Add CORS Middleware to allow requests from frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 chunks = []
 index = None
@@ -49,6 +58,25 @@ def save_fact(fact):
 def home():
     return {
         "message": "AI Learning Companion Backend Running 🚀"
+    }
+
+@app.get("/memory")
+def get_memory_list():
+    import json
+    try:
+        with open("memory.json", "r") as f:
+            data = json.load(f)
+        return data
+    except Exception as e:
+        return {"facts": []}
+
+@app.get("/status")
+def get_status():
+    global index
+    global chunks
+    return {
+        "pdf_loaded": index is not None,
+        "chunks_count": len(chunks) if chunks else 0
     }
 @app.post("/upload")
 async def upload_pdf(file: UploadFile = File(...)):

@@ -1,1 +1,8 @@
+node_modules
+dist
 .env
+.env.*
+*.log
+__pycache__/
+backen/.env
+backen/__pycache__/
