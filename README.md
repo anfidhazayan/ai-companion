@@ -6,6 +6,13 @@ An intelligent learning assistant that helps users study documents, books, or no
 
 ---
 
+## 🌐 Live Demo
+
+- **Frontend:** [https://your-frontend-url.vercel.app](https://your-frontend-url.vercel.app)
+- **Backend API:** [https://ai-companion-backend.onrender.com/docs](https://ai-companion-backend.onrender.com/docs)
+
+---
+
 ## 🚀 Key Features
 
 - **Document RAG (Retrieval-Augmented Generation)**: Upload any PDF document to instantly chunk, embed (using `SentenceTransformers`), and index it into a local `FAISS` vector database.
