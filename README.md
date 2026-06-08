@@ -40,7 +40,7 @@ An intelligent learning assistant that helps users study documents, books, or no
 
 1. Navigate to the backend directory:
    ```bash
-   cd backen
+   cd backend
    ```
 
 2. Create a `.env` file containing your Gemini API key:
@@ -50,7 +50,7 @@ An intelligent learning assistant that helps users study documents, books, or no
 
 3. Start the FastAPI backend server:
    ```bash
-   python -m uvicorn uploads.main:app --port 8000
+   python -m uvicorn main:app --port 8000
    ```
    *(The backend server will run on `http://localhost:8000`)*
 
